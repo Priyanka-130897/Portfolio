@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanka - Lyricist Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f5;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1a1a1d;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to bottom right, #1a1a1d, #333);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #f0a500;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e89e00;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .social-icons a i {
+            font-size: 35px;
+            color: #fff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover i {
+            color: #f0a500;
+            transform: scale(1.2);
+        }
+
+        /* Typing effect */
+        .typing-text {
+            display: inline-block;
+            border-right: 2px solid rgba(255, 255, 255, 0.75);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: rgba(255, 255, 255, 0.75); }
+        }
+
+        /* Music Section */
+        .music-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1a1a1d;
+        }
+
+        .songs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .song {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .song img {
+            width: 100%;
+            height: auto;
+        }
+
+        .song-content {
+            padding: 20px;
+        }
+
+        .song h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .song a {
+            text-decoration: none;
+            color: #f0a500;
+            font-weight: bold;
+        }
+
+        .song a:hover {
+            text-decoration: underline;
+        }
+
+        .song:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .music-icons a {
+            margin: 0 10px;
+        }
+
+        .music-icons a i {
+            font-size: 30px;
+            color: #1a1a1d;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .music-icons a:hover i {
+            color: #f0a500;
+            transform: scale(1.2);
+        }
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(to bottom right, #f0f0f5, #e8e8ee);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.8rem;
+    color: #1a1a1d;
+    margin-bottom: 30px;
+}
+
+.contact-section .contact-info {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-details a {
+    color: #f0a500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    font-size: 40px;
+    color: #000000 !important;  /* Force black color for visibility */
+    opacity: 1 !important;      /* Ensure full opacity */
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f0a500 !important;  /* Bright color on hover */
+    transform: rotate(360deg);  /* Rotation effect */
+    transition: transform 0.5s;
+}
+
+
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1d;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <img src="profile-pic.jpg" alt="Priyanka" class="profile-pic">
+        <h1>Priyanka</h1>
+        <p class="typing-text">Singer-Songwriter</p>
+        <p>Independent eclectic artist from Mumbai</p>
+        <a href="https://www.youtube.com/@PS.shindemusic" class="cta-button" target="_blank">Explore My Music</a>
+        <div class="social-icons">
+            <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+            <a href="https://www.instagram.com/_priyanka__shinde_?igsh=dTQwYmliaXR5N3Jz"><i class="fab fa-instagram"></i></a>
+            <a href="open.spotify.com/album/2lr0ZDw1Gq08bz0q2mM6fG"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.youtube.com/@PS.shindemusic"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music-section" id="music">
+        <h2>My Music</h2>
+        <div class="songs">
+            <!-- Song 1 -->
+            <div class="song">
+                <img src="https://img.youtube.com/vi/g4lUZcRcPwo/0.jpg" alt="Lajun Hasane">
+                <div class="song-content">
+                    <h3>Lajun Hasane</h3>
+                    <p>A soulful and ethereal track.</p>
+                    <div class="music-icons">
+                        <a href="https://www.youtube.com/watch?v=g4lUZcRcPwo" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/track/5oJjdley8SouwZuQhY0fHf" target="_blank"><i class="fab fa-spotify"></i></a>
+                        <a href="https://music.apple.com/us/album/lajun-hasane-single/1757302875" target="_blank"><i class="fab fa-apple"></i></a>
+                        <a href="https://itunes.apple.com" target="_blank"><i class="fab fa-itunes"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Song 2 -->
+            <div class="song">
+                <img src="https://img.youtube.com/vi/bpebQTttDbU/0.jpg" alt="Rahee">
+                <div class="song-content">
+                    <h3>Rahee</h3>
+                    <p>Featuring Yash Thakker, an emotional journey.</p>
+                    <div class="music-icons">
+                        <a href="https://www.youtube.com/watch?v=bpebQTttDbU" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/track/1P9l5GMsRFwWRtdKJ8e1Kp" target="_blank"><i class="fab fa-spotify"></i></a>
+                        <a href="https://music.apple.com/us/album/rahee-feat-yash-thakker-single/1706692991" target="_blank"><i class="fab fa-apple"></i></a>
+                        <a href="https://itunes.apple.com" target="_blank"><i class="fab fa-itunes"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Song 3 -->
+            <div class="song">
+                <img src="https://img.youtube.com/vi/GCDUJ0Jo1oE/0.jpg" alt="Meheki">
+                <div class="song-content">
+                    <h3>Meheki</h3>
+                    <p>A lyrical masterpiece.</p>
+                    <div class="music-icons">
+                        <a href="https://www.youtube.com/watch?v=GCDUJ0Jo1oE" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/track/22SAfeL8FJysl2otqjgMR2" target="_blank"><i class="fab fa-spotify"></i></a>
+                        <a href="https://music.apple.com/us/album/meheki/1612939901?i=1612939902" target="_blank"><i class="fab fa-apple"></i></a>
+                        <a href="https://itunes.apple.com" target="_blank"><i class="fab fa-itunes"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Song 4 -->
+            <div class="song">
+                <img src="https://img.youtube.com/vi/lmuuSt9NkW4/0.jpg" alt="Afloat">
+                <div class="song-content">
+                    <h3>Afloat</h3>
+                    <p>Collaboration with DreddAf.</p>
+                    <div class="music-icons">
+                        <a href="https://www.youtube.com/watch?v=lmuuSt9NkW4" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/track/3w2kYpQfZJVNKFNaoVmjBO" target="_blank"><i class="fab fa-spotify"></i></a>
+                        <a href="https://music.apple.com/us/album/afloat/1593963870?i=1593963871" target="_blank"><i class="fab fa-apple"></i></a>
+                        <a href="https://itunes.apple.com" target="_blank"><i class="fab fa-itunes"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Song 5 -->
+            <div class="song">
+                <img src="https://img.youtube.com/vi/yoE0Yyw8bcA/0.jpg" alt="Barkha">
+                <div class="song-content">
+                    <h3>बरखा</h3>
+                    <p>A romantic ode to the monsoon.</p>
+                    <div class="music-icons">
+                        <a href="https://www.youtube.com/watch?v=yoE0Yyw8bcA" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/track/0JHRX96mukW6kKm3MpA3oo" target="_blank"><i class="fab fa-spotify"></i></a>
+                        <a href="https://music.apple.com/us/album/%E0%A4%AC%E0%A4%B0%E0%A4%96-single/1589808701" target="_blank"><i class="fab fa-apple"></i></a>
+                        <a href="https://itunes.apple.com" target="_blank"><i class="fab fa-itunes"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <p class="contact-info">Get in touch via the details below or connect with me on social media!</p>
+        <div class="contact-details">
+            <p>Email: <a href="mailto:ps.shinde.music@gmail.com">ps.shinde.music@gmail.com</a></p>
+            <p>Phone: <a href="tel:+918655644402">8655644402</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/_priyanka__shinde_?igsh=dTQwYmliaXR5N3Jz" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:ps.shinde.music@gmail.com" target="_blank" aria-label="Gmail">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.youtube.com/@PS.shindemusic" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+        
+        
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Priyanka. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
